@@ -1,0 +1,45 @@
+<div class="row" id="add-booking">
+    <div class="col-12">
+
+        <form [formGroup]="formBooking" (ngSubmit)="addBooking()">
+
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="name">{{'label.name' | translate}} </label>
+                    <input type="text" formControlName="name" id="name" class="form-control">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="date">{{'label.date' | translate}} </label>
+                    <p-calendar [locale]="locale" dateFormat="dd/mm/yy" [stepMinute]="30" id="date" formControlName="date" [showTime]="true" [readonlyInput]="true" inputStyleClass="form-control is-valid">
+                    </p-calendar>
+
+
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-12 mt-2">
+                    <label for="services">{{'label.services' | translate}}   </label>
+                    <select class="form-select" formControlName="service" id="services">
+                <option title>Titulo</option>
+                <option credential="1">Credencial</option>
+                 <option college-insurance="2">Seguro Facultativo</option>
+                  <option other="3">Otro</option>
+                <option [selected]="first"  [value]="option"*ngFor="let option of options; let first=first">{{option | translate}}</option>
+              </select>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-12 d-grid mt-3">
+                    <button [disabled]="formBooking.invalid" type="submit" class="btn btn-block btn-primary">
+                      {{'label.add.booking' | translate}}
+
+                    </button>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

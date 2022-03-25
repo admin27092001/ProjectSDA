@@ -9,6 +9,18 @@ html body {
     background-color: aliceblue;
 }
 
+html body .p-calendar {
+    display: block;
+}
+
+html body .p-calendar .p-inputtext {
+    width: 100%;
+}
+
+html body .p-datepicker table th {
+    text-align: center;
+}
+
 .spinner {
     position: fixed;
     top: 50%;

@@ -1,5 +1,15 @@
 {
-    "label.app": "Gestor de Citas UTXJ",
+    "label.app": "Citas Admin",
     "label.login": "login",
-    "label.logout": "logouth"
+    "label.logout": "logouth",
+    "label.name": "Name",
+    "label.date": "Date",
+    "label.services": "Services",
+    "label.add.booking": "Add booking",
+    "title": "Title",
+    "credential": "Credential",
+    "college-insurance": "College insurance",
+    "other": "Other"
+
+    
 }

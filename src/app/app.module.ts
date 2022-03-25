@@ -5,7 +5,7 @@ import {TranslateService} from './services/translate.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //module
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +14,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { HeaderComponent } from './components/header/header.component';
+import { AddBookingComponent } from './components/add-booking/add-booking.component';
+import {CalendarModule} from 'primeng/calendar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 export function translateFactory(provider: TranslateService){
 return() => provider.getData();
@@ -24,13 +28,21 @@ return() => provider.getData();
     AppComponent,
     TranslatePipe,
     HeaderComponent,
+    AddBookingComponent,
+
+
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    CalendarModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     TranslateService,
